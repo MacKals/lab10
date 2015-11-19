@@ -35,7 +35,7 @@ public class Grep {
         }
         
         for (int ii = 0; ii < urls.length; ii++) { // start Producers
-            Thread producer = producers[ii] = new Thread(new Producer(/* ... */));
+            Thread producer = producers[ii] = new Thread(new Producer(urls[ii]));
             producer.start();
         }
         
@@ -60,7 +60,7 @@ public class Grep {
 
 class Producer implements Runnable {
     
-    Producer(/* ... */) {
+    Producer( ) {
         // TODO construct your Producer here!
     }
 
@@ -72,7 +72,7 @@ class Producer implements Runnable {
 
 class Consumer implements Runnable {
     
-    Consumer(/* ... */) {
+    Consumer( ) {
         // TODO construct your Consumer here!
     }
 

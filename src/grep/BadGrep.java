@@ -40,8 +40,7 @@ public class BadGrep {
         public void run() {
             while (lines.size() > 0) {
                 int i = (int) (Math.random() * lines.size());
-                String line = lines.get(i);
-                lines.remove(i);
+                String line = lines.remove(i);
                 if (line.contains(substring)) {
                     System.out.println(line);
                     ++numMatches;

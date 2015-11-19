@@ -65,7 +65,9 @@ class Producer implements Runnable {
     }
 
     public void run() {
-        // TODO read lines and push them onto the queue for consumers
+        BufferedReader in = new BufferedReader(new InputStreamReader(new URL(url).openStream()));
+        String line;
+        while ((line = in.readLine()) != null) { /* do something with line */ }
     }
     
 }
